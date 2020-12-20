@@ -1,0 +1,80 @@
+{
+  "_id": "el_pollo_loco",
+  "startUrl": ["https://www.elpolloloco.com/our-food/"],
+  "selectors": [
+    {
+      "id": "main_food_link",
+      "type": "SelectorLink",
+      "parentSelectors": ["_root"],
+      "selector": "a.card-section",
+      "multiple": true,
+      "delay": 0
+    },
+    {
+      "id": "food_ele_click",
+      "type": "SelectorElementClick",
+      "parentSelectors": ["main_food_link"],
+      "selector": "#nutritionOverlay1 div.content",
+      "multiple": true,
+      "delay": "4000",
+      "clickElementSelector": ".info a",
+      "clickType": "clickOnce",
+      "discardInitialElements": "do-not-discard",
+      "clickElementUniquenessType": "uniqueHTML"
+    },
+    {
+      "id": "name",
+      "type": "SelectorText",
+      "parentSelectors": ["food_ele_click"],
+      "selector": "i.nutritionValueCell",
+      "multiple": false,
+      "regex": "",
+      "delay": 0
+    },
+    {
+      "id": "serving_size",
+      "type": "SelectorText",
+      "parentSelectors": ["food_ele_click"],
+      "selector": "td#servingSize",
+      "multiple": false,
+      "regex": "",
+      "delay": 0
+    },
+    {
+      "id": "calories",
+      "type": "SelectorText",
+      "parentSelectors": ["food_ele_click"],
+      "selector": "td#calories",
+      "multiple": false,
+      "regex": "",
+      "delay": 0
+    },
+    {
+      "id": "fat",
+      "type": "SelectorText",
+      "parentSelectors": ["food_ele_click"],
+      "selector": "td#totalFat",
+      "multiple": false,
+      "regex": "",
+      "delay": 0
+    },
+    {
+      "id": "protein",
+      "type": "SelectorText",
+      "parentSelectors": ["food_ele_click"],
+      "selector": "td#protein",
+      "multiple": false,
+      "regex": "",
+      "delay": 0
+    },
+    {
+      "id": "carbs",
+      "type": "SelectorText",
+      "parentSelectors": ["food_ele_click"],
+      "selector": "td#carbohydrates",
+      "multiple": false,
+      "regex": "",
+      "delay": 0
+    }
+  ]
+}
