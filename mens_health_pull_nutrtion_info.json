@@ -1,0 +1,50 @@
+{
+  "_id": "mens_health_pull_nutrtion_info",
+  "startUrl": ["https://www.menshealth.com/health/g22589895/unhealthiest-restaurant-meals-in-america/?slide=[1-40]"],
+  "selectors": [
+    {
+      "id": "card",
+      "type": "SelectorElement",
+      "parentSelectors": ["_root"],
+      "selector": "div.active",
+      "multiple": false,
+      "delay": 0
+    },
+    {
+      "id": "name",
+      "type": "SelectorText",
+      "parentSelectors": ["card"],
+      "selector": "div.slideshow-slide-hed",
+      "multiple": false,
+      "regex": "",
+      "delay": 0
+    },
+    {
+      "id": "descr",
+      "type": "SelectorText",
+      "parentSelectors": ["card"],
+      "selector": "p",
+      "multiple": false,
+      "regex": "",
+      "delay": 0
+    },
+    {
+      "id": "nutrition",
+      "type": "SelectorText",
+      "parentSelectors": ["card"],
+      "selector": "strong",
+      "multiple": false,
+      "regex": "",
+      "delay": 0
+    },
+    {
+      "id": "rank",
+      "type": "SelectorText",
+      "parentSelectors": ["card"],
+      "selector": "span.slideshow-toolbar-count-position",
+      "multiple": false,
+      "regex": "",
+      "delay": 0
+    }
+  ]
+}

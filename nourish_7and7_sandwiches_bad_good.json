@@ -1,0 +1,45 @@
+{
+  "_id": "nourish_7and7_sandwiches_bad_good",
+  "startUrl": ["https://www.webmd.com/diet/ss/slideshow-worst-sandwiches-and-wraps"],
+  "selectors": [
+    {
+      "id": "card",
+      "type": "SelectorElementClick",
+      "parentSelectors": ["_root", "card"],
+      "selector": ".active div.caption",
+      "multiple": true,
+      "delay": 2000,
+      "clickElementSelector": ".primary .next i",
+      "clickType": "clickMore",
+      "discardInitialElements": "do-not-discard",
+      "clickElementUniquenessType": "uniqueCSSSelector"
+    },
+    {
+      "id": "name",
+      "type": "SelectorText",
+      "parentSelectors": ["card"],
+      "selector": "h2",
+      "multiple": false,
+      "regex": "",
+      "delay": 0
+    },
+    {
+      "id": "other_name_from_body",
+      "type": "SelectorText",
+      "parentSelectors": ["card"],
+      "selector": "b",
+      "multiple": false,
+      "regex": "",
+      "delay": 0
+    },
+    {
+      "id": "descr",
+      "type": "SelectorText",
+      "parentSelectors": ["card"],
+      "selector": "p",
+      "multiple": false,
+      "regex": "",
+      "delay": 0
+    }
+  ]
+}

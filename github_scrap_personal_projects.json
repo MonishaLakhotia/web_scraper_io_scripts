@@ -1,0 +1,85 @@
+{
+  "_id": "github_scrap_personal_projects",
+  "startUrl": ["https://github.com/MajorZiploc?tab=repositories"],
+  "selectors": [
+    {
+      "id": "ele",
+      "type": "SelectorElement",
+      "parentSelectors": ["_root"],
+      "selector": "li.source",
+      "multiple": true,
+      "delay": 0
+    },
+    {
+      "id": "repo_link",
+      "type": "SelectorLink",
+      "parentSelectors": ["ele"],
+      "selector": "a",
+      "multiple": false,
+      "delay": 0
+    },
+    {
+      "id": "num_of_branch",
+      "type": "SelectorText",
+      "parentSelectors": ["repo_link"],
+      "selector": ".flex-self-center a:nth-of-type(1) strong",
+      "multiple": false,
+      "regex": "",
+      "delay": 0
+    },
+    {
+      "id": "languages",
+      "type": "SelectorText",
+      "parentSelectors": ["repo_link"],
+      "selector": ".BorderGrid-cell ul.list-style-none",
+      "multiple": false,
+      "regex": "",
+      "delay": 0
+    },
+    {
+      "id": "num_of_watchers",
+      "type": "SelectorText",
+      "parentSelectors": ["repo_link"],
+      "selector": ".f5 a.social-count",
+      "multiple": false,
+      "regex": "",
+      "delay": 0
+    },
+    {
+      "id": "num_of_star",
+      "type": "SelectorText",
+      "parentSelectors": ["repo_link"],
+      "selector": ".unstarred a",
+      "multiple": false,
+      "regex": "",
+      "delay": 0
+    },
+    {
+      "id": "num_of_forks",
+      "type": "SelectorText",
+      "parentSelectors": ["repo_link"],
+      "selector": "a[aria-label='1 user forked this repository']",
+      "multiple": false,
+      "regex": "",
+      "delay": 0
+    },
+    {
+      "id": "main_language",
+      "type": "SelectorText",
+      "parentSelectors": ["ele"],
+      "selector": "span[itemprop='programmingLanguage']",
+      "multiple": false,
+      "regex": "",
+      "delay": 0
+    },
+    {
+      "id": "last_updated",
+      "type": "SelectorText",
+      "parentSelectors": ["ele"],
+      "selector": "relative-time",
+      "multiple": false,
+      "regex": "",
+      "delay": 0
+    }
+  ]
+}

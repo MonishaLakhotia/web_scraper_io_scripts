@@ -1,0 +1,49 @@
+{
+  "_id": "taco_bell_menu",
+  "startUrl": ["https://www.tacobell.com/food"],
+  "selectors": [
+    {
+      "id": "category",
+      "type": "SelectorLink",
+      "parentSelectors": ["_root"],
+      "selector": "a.cls-category-card-item:nth-of-type(n+2)",
+      "multiple": true,
+      "delay": 0
+    },
+    {
+      "id": "name",
+      "type": "SelectorText",
+      "parentSelectors": ["card"],
+      "selector": ".product-name a",
+      "multiple": false,
+      "regex": "",
+      "delay": 0
+    },
+    {
+      "id": "price_in_dollar",
+      "type": "SelectorText",
+      "parentSelectors": ["card"],
+      "selector": "span:nth-of-type(2)",
+      "multiple": false,
+      "regex": "",
+      "delay": 0
+    },
+    {
+      "id": "calories",
+      "type": "SelectorText",
+      "parentSelectors": ["card"],
+      "selector": "span.js-calorie-value",
+      "multiple": false,
+      "regex": "",
+      "delay": 0
+    },
+    {
+      "id": "card",
+      "type": "SelectorElement",
+      "parentSelectors": ["category"],
+      "selector": "div.product-card",
+      "multiple": true,
+      "delay": 0
+    }
+  ]
+}
