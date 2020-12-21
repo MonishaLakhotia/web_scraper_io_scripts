@@ -1,0 +1,44 @@
+{
+  "_id": "bk_menu",
+  "startUrl": ["http://www.burgerking.com.mx/en/menu"],
+  "selectors": [
+    {
+      "id": "category",
+      "type": "SelectorLink",
+      "parentSelectors": ["_root"],
+      "selector": "a.inner",
+      "multiple": true,
+      "delay": 0
+    },
+    {
+      "id": "item",
+      "type": "SelectorElementClick",
+      "parentSelectors": ["category"],
+      "selector": "div.row.clearfix",
+      "multiple": true,
+      "delay": 2000,
+      "clickElementSelector": ".imgWrap img",
+      "clickType": "clickOnce",
+      "discardInitialElements": "do-not-discard",
+      "clickElementUniquenessType": "uniqueHTMLText"
+    },
+    {
+      "id": "name",
+      "type": "SelectorText",
+      "parentSelectors": ["item"],
+      "selector": ".title",
+      "multiple": false,
+      "regex": "",
+      "delay": 0
+    },
+    {
+      "id": "descr",
+      "type": "SelectorText",
+      "parentSelectors": ["item"],
+      "selector": ".description",
+      "multiple": false,
+      "regex": "",
+      "delay": 0
+    }
+  ]
+}

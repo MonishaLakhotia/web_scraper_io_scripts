@@ -1,0 +1,2 @@
+# linting/formatting:
+# prettier --write "**/*"
