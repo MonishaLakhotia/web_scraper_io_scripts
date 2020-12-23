@@ -1,0 +1,123 @@
+{
+  "_id": "kfc_google_menu",
+  "startUrl": [
+    "https://www.google.com/search?rlz=1C1CHBF_enUS905US905&ei=ebDgX67tB6yA5wLY27CICQ&q=kfc+menu+nutrition&oq=kfc+menu+n&gs_lcp=CgZwc3ktYWIQAxgAMgUIABCRAjIFCAAQyQMyBQgAEJIDMgIIADICCAAyAggAMgIIADICCAAyAggAMgIIADoECAAQRzoECAAQQzoICAAQsQMQgwE6CAgAELEDEMkDOggILhDHARCvAToLCAAQsQMQgwEQkQI6BwgAELEDEEM6BQgAELEDUOwOWNofYNInaABwAngAgAFyiAHLBJIBAzUuMpgBAKABAaoBB2d3cy13aXrIAQjAAQE&sclient=psy-ab"
+  ],
+  "selectors": [
+    {
+      "id": "item",
+      "type": "SelectorLink",
+      "parentSelectors": ["_root"],
+      "selector": "a.rl_item",
+      "multiple": true,
+      "delay": 0
+    },
+    {
+      "id": "card",
+      "type": "SelectorElement",
+      "parentSelectors": ["item"],
+      "selector": "div.I6TXqe",
+      "multiple": false,
+      "delay": 0
+    },
+    {
+      "id": "name",
+      "type": "SelectorText",
+      "parentSelectors": ["card"],
+      "selector": ".qrShPb span",
+      "multiple": false,
+      "regex": "",
+      "delay": 0
+    },
+    {
+      "id": "serving_size",
+      "type": "SelectorText",
+      "parentSelectors": ["card"],
+      "selector": "select.kno-nf-ss",
+      "multiple": false,
+      "regex": "",
+      "delay": 0
+    },
+    {
+      "id": "calories",
+      "type": "SelectorText",
+      "parentSelectors": ["card"],
+      "selector": ".kno-nf-cq span.abs",
+      "multiple": false,
+      "regex": "",
+      "delay": 0
+    },
+    {
+      "id": "cholesterol",
+      "type": "SelectorText",
+      "parentSelectors": ["card"],
+      "selector": "tr:contains('Cholesterol')",
+      "multiple": false,
+      "regex": "",
+      "delay": 0
+    },
+    {
+      "id": "sodium",
+      "type": "SelectorText",
+      "parentSelectors": ["card"],
+      "selector": "tr:contains('Sodium')",
+      "multiple": false,
+      "regex": "",
+      "delay": 0
+    },
+    {
+      "id": "total_fat",
+      "type": "SelectorText",
+      "parentSelectors": ["card"],
+      "selector": "tr:contains('Total Fat')",
+      "multiple": false,
+      "regex": "",
+      "delay": 0
+    },
+    {
+      "id": "saturated_fat",
+      "type": "SelectorText",
+      "parentSelectors": ["card"],
+      "selector": "tr:contains('Saturated fat')",
+      "multiple": false,
+      "regex": "",
+      "delay": 0
+    },
+    {
+      "id": "trans_fat",
+      "type": "SelectorText",
+      "parentSelectors": ["card"],
+      "selector": "tr:contains('Trans fat')",
+      "multiple": false,
+      "regex": "",
+      "delay": 0
+    },
+    {
+      "id": "total_carbs",
+      "type": "SelectorText",
+      "parentSelectors": ["card"],
+      "selector": "tr:contains('Total Carbo')",
+      "multiple": false,
+      "regex": "",
+      "delay": 0
+    },
+    {
+      "id": "dietary_fiber",
+      "type": "SelectorText",
+      "parentSelectors": ["card"],
+      "selector": "tr:contains('Dietary fiber')",
+      "multiple": false,
+      "regex": "",
+      "delay": 0
+    },
+    {
+      "id": "sugar",
+      "type": "SelectorText",
+      "parentSelectors": ["card"],
+      "selector": "tr:contains('Sugar')",
+      "multiple": false,
+      "regex": "",
+      "delay": 0
+    }
+  ]
+}
