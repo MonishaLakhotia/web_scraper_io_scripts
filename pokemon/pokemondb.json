@@ -6,7 +6,7 @@
       "id": "card",
       "type": "SelectorElement",
       "parentSelectors": ["_root"],
-      "selector": "tbody tr",
+      "selector": "tbody tr:lt(470)",
       "multiple": true,
       "delay": 0
     },
@@ -157,7 +157,7 @@
       "id": "generation",
       "type": "SelectorLink",
       "parentSelectors": ["name_link"],
-      "selector": "ul:nth-of-type(3) a",
+      "selector": "li > a[title*='Generation']",
       "multiple": true,
       "delay": 0
     },
