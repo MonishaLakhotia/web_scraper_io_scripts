@@ -11,10 +11,10 @@
       "delay": 0
     },
     {
-      "id": "name",
+      "id": "name_link",
       "type": "SelectorLink",
       "parentSelectors": ["card"],
-      "selector": "td.cell-name",
+      "selector": "a.ent-name",
       "multiple": false,
       "delay": 0
     },
@@ -39,7 +39,7 @@
     {
       "id": "national_no",
       "type": "SelectorText",
-      "parentSelectors": ["name"],
+      "parentSelectors": ["name_link"],
       "selector": "tr:contains('National №') td",
       "multiple": false,
       "regex": "",
@@ -48,7 +48,7 @@
     {
       "id": "ev_yield",
       "type": "SelectorText",
-      "parentSelectors": ["name"],
+      "parentSelectors": ["name_link"],
       "selector": "tr:contains('EV yield') td",
       "multiple": false,
       "regex": "",
@@ -57,7 +57,7 @@
     {
       "id": "growth_rate",
       "type": "SelectorText",
-      "parentSelectors": ["name"],
+      "parentSelectors": ["name_link"],
       "selector": "tr:contains('Growth Rate') td",
       "multiple": false,
       "regex": "",
@@ -66,7 +66,7 @@
     {
       "id": "catch_rate",
       "type": "SelectorText",
-      "parentSelectors": ["name"],
+      "parentSelectors": ["name_link"],
       "selector": "tr:contains('Catch rate') td",
       "multiple": false,
       "regex": "",
@@ -75,7 +75,7 @@
     {
       "id": "base_friendship",
       "type": "SelectorText",
-      "parentSelectors": ["name"],
+      "parentSelectors": ["name_link"],
       "selector": "tr:contains('Base Friendship') td",
       "multiple": false,
       "regex": "",
@@ -84,7 +84,7 @@
     {
       "id": "base_exp",
       "type": "SelectorText",
-      "parentSelectors": ["name"],
+      "parentSelectors": ["name_link"],
       "selector": "tr:contains('Base Exp.') td",
       "multiple": false,
       "regex": "",
@@ -93,7 +93,7 @@
     {
       "id": "egg_groups",
       "type": "SelectorText",
-      "parentSelectors": ["name"],
+      "parentSelectors": ["name_link"],
       "selector": "tr:contains('Egg Groups') td",
       "multiple": false,
       "regex": "",
@@ -102,7 +102,7 @@
     {
       "id": "gender",
       "type": "SelectorText",
-      "parentSelectors": ["name"],
+      "parentSelectors": ["name_link"],
       "selector": "tr:contains('Gender') td",
       "multiple": false,
       "regex": "",
@@ -111,7 +111,7 @@
     {
       "id": "egg_cycles",
       "type": "SelectorText",
-      "parentSelectors": ["name"],
+      "parentSelectors": ["name_link"],
       "selector": "tr:contains('Egg cycles') td",
       "multiple": false,
       "regex": "",
@@ -120,7 +120,7 @@
     {
       "id": "species",
       "type": "SelectorText",
-      "parentSelectors": ["name"],
+      "parentSelectors": ["name_link"],
       "selector": "tr:contains('Species') td",
       "multiple": false,
       "regex": "",
@@ -129,7 +129,7 @@
     {
       "id": "height",
       "type": "SelectorText",
-      "parentSelectors": ["name"],
+      "parentSelectors": ["name_link"],
       "selector": "tr:contains('Height') td",
       "multiple": false,
       "regex": "",
@@ -138,7 +138,7 @@
     {
       "id": "abilities",
       "type": "SelectorText",
-      "parentSelectors": ["name"],
+      "parentSelectors": ["name_link"],
       "selector": "tr:contains('Abilities') td",
       "multiple": false,
       "regex": "",
@@ -147,7 +147,7 @@
     {
       "id": "local_no",
       "type": "SelectorText",
-      "parentSelectors": ["name"],
+      "parentSelectors": ["name_link"],
       "selector": "tr:contains('Local №') td",
       "multiple": false,
       "regex": "",
@@ -156,7 +156,7 @@
     {
       "id": "generation",
       "type": "SelectorLink",
-      "parentSelectors": ["name"],
+      "parentSelectors": ["name_link"],
       "selector": "ul:nth-of-type(3) a",
       "multiple": true,
       "delay": 0
@@ -194,6 +194,15 @@
       "parentSelectors": ["generation"],
       "selector": ".active div.grid-col:nth-of-type(1) div:nth-of-type(2) tbody tr",
       "multiple": true,
+      "regex": "",
+      "delay": 0
+    },
+    {
+      "id": "name",
+      "type": "SelectorText",
+      "parentSelectors": ["card"],
+      "selector": "td.cell-name",
+      "multiple": false,
       "regex": "",
       "delay": 0
     }
