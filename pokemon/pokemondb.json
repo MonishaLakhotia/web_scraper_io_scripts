@@ -1,0 +1,201 @@
+{
+  "_id": "pokemondb",
+  "startUrl": ["https://pokemondb.net/pokedex/all"],
+  "selectors": [
+    {
+      "id": "card",
+      "type": "SelectorElement",
+      "parentSelectors": ["_root"],
+      "selector": "tbody tr",
+      "multiple": true,
+      "delay": 0
+    },
+    {
+      "id": "name",
+      "type": "SelectorLink",
+      "parentSelectors": ["card"],
+      "selector": "td.cell-name",
+      "multiple": false,
+      "delay": 0
+    },
+    {
+      "id": "type",
+      "type": "SelectorText",
+      "parentSelectors": ["card"],
+      "selector": "td.cell-icon",
+      "multiple": false,
+      "regex": "",
+      "delay": 0
+    },
+    {
+      "id": "dex_num",
+      "type": "SelectorText",
+      "parentSelectors": ["card"],
+      "selector": "span.infocard-cell-data",
+      "multiple": false,
+      "regex": "",
+      "delay": 0
+    },
+    {
+      "id": "national_no",
+      "type": "SelectorText",
+      "parentSelectors": ["name"],
+      "selector": "tr:contains('National №') td",
+      "multiple": false,
+      "regex": "",
+      "delay": 0
+    },
+    {
+      "id": "ev_yield",
+      "type": "SelectorText",
+      "parentSelectors": ["name"],
+      "selector": "tr:contains('EV yield') td",
+      "multiple": false,
+      "regex": "",
+      "delay": 0
+    },
+    {
+      "id": "growth_rate",
+      "type": "SelectorText",
+      "parentSelectors": ["name"],
+      "selector": "tr:contains('Growth Rate') td",
+      "multiple": false,
+      "regex": "",
+      "delay": 0
+    },
+    {
+      "id": "catch_rate",
+      "type": "SelectorText",
+      "parentSelectors": ["name"],
+      "selector": "tr:contains('Catch rate') td",
+      "multiple": false,
+      "regex": "",
+      "delay": 0
+    },
+    {
+      "id": "base_friendship",
+      "type": "SelectorText",
+      "parentSelectors": ["name"],
+      "selector": "tr:contains('Base Friendship') td",
+      "multiple": false,
+      "regex": "",
+      "delay": 0
+    },
+    {
+      "id": "base_exp",
+      "type": "SelectorText",
+      "parentSelectors": ["name"],
+      "selector": "tr:contains('Base Exp.') td",
+      "multiple": false,
+      "regex": "",
+      "delay": 0
+    },
+    {
+      "id": "egg_groups",
+      "type": "SelectorText",
+      "parentSelectors": ["name"],
+      "selector": "tr:contains('Egg Groups') td",
+      "multiple": false,
+      "regex": "",
+      "delay": 0
+    },
+    {
+      "id": "gender",
+      "type": "SelectorText",
+      "parentSelectors": ["name"],
+      "selector": "tr:contains('Gender') td",
+      "multiple": false,
+      "regex": "",
+      "delay": 0
+    },
+    {
+      "id": "egg_cycles",
+      "type": "SelectorText",
+      "parentSelectors": ["name"],
+      "selector": "tr:contains('Egg cycles') td",
+      "multiple": false,
+      "regex": "",
+      "delay": 0
+    },
+    {
+      "id": "species",
+      "type": "SelectorText",
+      "parentSelectors": ["name"],
+      "selector": "tr:contains('Species') td",
+      "multiple": false,
+      "regex": "",
+      "delay": 0
+    },
+    {
+      "id": "height",
+      "type": "SelectorText",
+      "parentSelectors": ["name"],
+      "selector": "tr:contains('Height') td",
+      "multiple": false,
+      "regex": "",
+      "delay": 0
+    },
+    {
+      "id": "abilities",
+      "type": "SelectorText",
+      "parentSelectors": ["name"],
+      "selector": "tr:contains('Abilities') td",
+      "multiple": false,
+      "regex": "",
+      "delay": 0
+    },
+    {
+      "id": "local_no",
+      "type": "SelectorText",
+      "parentSelectors": ["name"],
+      "selector": "tr:contains('Local №') td",
+      "multiple": false,
+      "regex": "",
+      "delay": 0
+    },
+    {
+      "id": "generation",
+      "type": "SelectorLink",
+      "parentSelectors": ["name"],
+      "selector": "ul:nth-of-type(3) a",
+      "multiple": true,
+      "delay": 0
+    },
+    {
+      "id": "moves_learnt_by_level_up",
+      "type": "SelectorText",
+      "parentSelectors": ["generation"],
+      "selector": ".active div.grid-col:nth-of-type(1) tbody tr",
+      "multiple": true,
+      "regex": "",
+      "delay": 0
+    },
+    {
+      "id": "moves_learnt_by_hm",
+      "type": "SelectorText",
+      "parentSelectors": ["generation"],
+      "selector": ".active div:nth-of-type(2) div:nth-of-type(1) tbody tr",
+      "multiple": true,
+      "regex": "",
+      "delay": 0
+    },
+    {
+      "id": "moves_learnt_by_tm",
+      "type": "SelectorText",
+      "parentSelectors": ["generation"],
+      "selector": ".active div:nth-of-type(2) div:nth-of-type(2) tbody tr",
+      "multiple": true,
+      "regex": "",
+      "delay": 0
+    },
+    {
+      "id": "egg_moves",
+      "type": "SelectorText",
+      "parentSelectors": ["generation"],
+      "selector": ".active div.grid-col:nth-of-type(1) div:nth-of-type(2) tbody tr",
+      "multiple": true,
+      "regex": "",
+      "delay": 0
+    }
+  ]
+}
