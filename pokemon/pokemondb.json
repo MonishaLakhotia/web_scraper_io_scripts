@@ -165,34 +165,16 @@
       "id": "moves_learnt_by_level_up",
       "type": "SelectorText",
       "parentSelectors": ["generation"],
-      "selector": ".active div.grid-col:nth-of-type(1) tbody tr",
+      "selector": ".active div.grid-col:nth-of-type(1) div:nth-of-type(1) tbody tr",
       "multiple": true,
       "regex": "",
       "delay": 0
     },
     {
-      "id": "moves_learnt_by_hm",
+      "id": "moves_learnt_by_hm_or_tm_or_tr",
       "type": "SelectorText",
       "parentSelectors": ["generation"],
-      "selector": ".active div:nth-of-type(2) div:nth-of-type(1) tbody tr",
-      "multiple": true,
-      "regex": "",
-      "delay": 0
-    },
-    {
-      "id": "moves_learnt_by_tm",
-      "type": "SelectorText",
-      "parentSelectors": ["generation"],
-      "selector": ".active div:nth-of-type(2) div:nth-of-type(2) tbody tr",
-      "multiple": true,
-      "regex": "",
-      "delay": 0
-    },
-    {
-      "id": "egg_moves",
-      "type": "SelectorText",
-      "parentSelectors": ["generation"],
-      "selector": ".active div.grid-col:nth-of-type(1) div:nth-of-type(2) tbody tr",
+      "selector": ".active div:nth-of-type(2) div tbody tr",
       "multiple": true,
       "regex": "",
       "delay": 0
