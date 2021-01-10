@@ -165,16 +165,16 @@
       "id": "moves_learnt_by_level_up",
       "type": "SelectorText",
       "parentSelectors": ["generation"],
-      "selector": ".active div.grid-col:nth-of-type(1) div:nth-of-type(1) tbody tr",
+      "selector": "h3:contains('Moves learnt by level up') ~ div:first tbody tr",
       "multiple": true,
       "regex": "",
       "delay": 0
     },
     {
-      "id": "moves_learnt_by_hm_or_tm_or_tr",
+      "id": "moves_learnt_by_tm",
       "type": "SelectorText",
       "parentSelectors": ["generation"],
-      "selector": ".active div:nth-of-type(2) div tbody tr",
+      "selector": "h3:contains('Moves learnt by TM') ~ div:first tbody tr",
       "multiple": true,
       "regex": "",
       "delay": 0
@@ -185,6 +185,51 @@
       "parentSelectors": ["card"],
       "selector": "td.cell-name",
       "multiple": false,
+      "regex": "",
+      "delay": 0
+    },
+    {
+      "id": "moves_learnt_by_tr",
+      "type": "SelectorText",
+      "parentSelectors": ["generation"],
+      "selector": "h3:contains('Moves learnt by TR') ~ div:first tbody tr",
+      "multiple": true,
+      "regex": "",
+      "delay": 0
+    },
+    {
+      "id": "moves_learnt_by_move_tutor",
+      "type": "SelectorText",
+      "parentSelectors": ["generation"],
+      "selector": "h3:contains('Move Tutor moves') ~ div:first tbody tr",
+      "multiple": true,
+      "regex": "",
+      "delay": 0
+    },
+    {
+      "id": "moves_learnt_by_egg",
+      "type": "SelectorText",
+      "parentSelectors": ["generation"],
+      "selector": "h3:contains('Egg moves') ~ div:first tbody tr",
+      "multiple": true,
+      "regex": "",
+      "delay": 0
+    },
+    {
+      "id": "moves_learnt_by_hm",
+      "type": "SelectorText",
+      "parentSelectors": ["generation"],
+      "selector": "h3:contains('Moves learnt by HM') ~ div:first tbody tr",
+      "multiple": true,
+      "regex": "",
+      "delay": 0
+    },
+    {
+      "id": "moves_learnt_by_transfer",
+      "type": "SelectorText",
+      "parentSelectors": ["generation"],
+      "selector": "h3:contains('Transfer-only moves') ~ div:first tbody tr",
+      "multiple": true,
       "regex": "",
       "delay": 0
     }
