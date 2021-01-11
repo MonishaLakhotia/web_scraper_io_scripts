@@ -165,7 +165,7 @@
       "id": "moves_learnt_by_level_up",
       "type": "SelectorText",
       "parentSelectors": ["generation"],
-      "selector": "h3:contains('Moves learnt by level up') + p + div tbody tr",
+      "selector": "div.active h3:contains('Moves learnt by level up') + p + div tbody tr",
       "multiple": true,
       "regex": "",
       "delay": 0
@@ -174,7 +174,7 @@
       "id": "moves_learnt_by_tm",
       "type": "SelectorText",
       "parentSelectors": ["generation"],
-      "selector": "h3:contains('Moves learnt by TM') + p + div tbody tr",
+      "selector": "div.active h3:contains('Moves learnt by TM') + p + div tbody tr",
       "multiple": true,
       "regex": "",
       "delay": 0
@@ -192,7 +192,7 @@
       "id": "moves_learnt_by_tr",
       "type": "SelectorText",
       "parentSelectors": ["generation"],
-      "selector": "h3:contains('Moves learnt by TR') + p + div tbody tr",
+      "selector": "div.active h3:contains('Moves learnt by TR') + p + div tbody tr",
       "multiple": true,
       "regex": "",
       "delay": 0
@@ -201,7 +201,7 @@
       "id": "moves_learnt_by_move_tutor",
       "type": "SelectorText",
       "parentSelectors": ["generation"],
-      "selector": "h3:contains('Move Tutor moves') + p + div tbody tr",
+      "selector": "div.active h3:contains('Move Tutor moves') + p + div tbody tr",
       "multiple": true,
       "regex": "",
       "delay": 0
@@ -210,7 +210,7 @@
       "id": "moves_learnt_by_egg",
       "type": "SelectorText",
       "parentSelectors": ["generation"],
-      "selector": "h3:contains('Egg moves') + p + div tbody tr",
+      "selector": "div.active h3:contains('Egg moves') + p + div tbody tr",
       "multiple": true,
       "regex": "",
       "delay": 0
@@ -219,7 +219,7 @@
       "id": "moves_learnt_by_hm",
       "type": "SelectorText",
       "parentSelectors": ["generation"],
-      "selector": "h3:contains('Moves learnt by HM') + p + div tbody tr",
+      "selector": "div.active h3:contains('Moves learnt by HM') + p + div tbody tr",
       "multiple": true,
       "regex": "",
       "delay": 0
@@ -228,7 +228,7 @@
       "id": "moves_learnt_by_transfer",
       "type": "SelectorText",
       "parentSelectors": ["generation"],
-      "selector": "h3:contains('Transfer-only moves') + p + div tbody tr",
+      "selector": "div.active h3:contains('Transfer-only moves') + p + div tbody tr",
       "multiple": true,
       "regex": "",
       "delay": 0
@@ -237,7 +237,7 @@
       "id": "moves_learnt_by_evolution",
       "type": "SelectorText",
       "parentSelectors": ["generation"],
-      "selector": "h3:contains('Moves learnt on evolution') + p + div tbody tr",
+      "selector": "div.active h3:contains('Moves learnt on evolution') + p + div tbody tr",
       "multiple": true,
       "regex": "",
       "delay": 0
