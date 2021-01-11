@@ -6,7 +6,7 @@
       "id": "card",
       "type": "SelectorElement",
       "parentSelectors": ["_root"],
-      "selector": "tbody tr:lt(470):gt(400)",
+      "selector": "tbody tr:lt(470)",
       "multiple": true,
       "delay": 0
     },
