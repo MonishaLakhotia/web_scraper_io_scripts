@@ -241,6 +241,15 @@
       "multiple": true,
       "regex": "",
       "delay": 0
+    },
+    {
+      "id": "evolution_chart",
+      "type": "SelectorText",
+      "parentSelectors": ["name_link"],
+      "selector": "h2:contains('Evolution chart') + div.infocard-list-evo",
+      "multiple": false,
+      "regex": "",
+      "delay": 0
     }
   ]
 }
