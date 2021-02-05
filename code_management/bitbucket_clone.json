@@ -27,15 +27,6 @@
       "delay": 0
     },
     {
-      "id": "clone_quick_link",
-      "type": "SelectorElementAttribute",
-      "parentSelectors": ["repo_name"],
-      "selector": "div[role=\"alert\"] input",
-      "multiple": false,
-      "extractAttribute": "value",
-      "delay": 0
-    },
-    {
       "id": "clone_btn",
       "type": "SelectorElementClick",
       "parentSelectors": ["repo_name"],
