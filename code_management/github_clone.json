@@ -1,0 +1,43 @@
+{
+  "_id": "github_repos_clone",
+  "startUrl": ["https://github.com/MajorZiploc?tab=repositories"],
+  "selectors": [
+    {
+      "id": "repo",
+      "type": "SelectorElement",
+      "parentSelectors": ["_root"],
+      "selector": "li[itemprop='owns']",
+      "multiple": true,
+      "delay": 0
+    },
+    {
+      "id": "repo_name",
+      "type": "SelectorLink",
+      "parentSelectors": ["repo"],
+      "selector": "a[itemprop='name codeRepository']",
+      "multiple": false,
+      "delay": 0
+    },
+    {
+      "id": "code_btn",
+      "type": "SelectorElementClick",
+      "parentSelectors": ["repo_name"],
+      "selector": "tab-container div:nth-of-type(3) div.input-group",
+      "multiple": false,
+      "delay": 2000,
+      "clickElementSelector": "summary.btn-primary",
+      "clickType": "clickOnce",
+      "discardInitialElements": "do-not-discard",
+      "clickElementUniquenessType": "uniqueText"
+    },
+    {
+      "id": "clone",
+      "type": "SelectorElementAttribute",
+      "parentSelectors": ["code_btn"],
+      "selector": "input",
+      "multiple": false,
+      "extractAttribute": "value",
+      "delay": 0
+    }
+  ]
+}
