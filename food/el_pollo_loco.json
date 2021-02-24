@@ -14,10 +14,10 @@
       "id": "food_ele_click",
       "type": "SelectorElementClick",
       "parentSelectors": ["main_food_link"],
-      "selector": "#nutritionOverlay1 div.content",
+      "selector": ":is(div#nutritionOverlay2, div#nutritionOverlay1)",
       "multiple": true,
       "delay": "4000",
-      "clickElementSelector": ".info a",
+      "clickElementSelector": ".food-item-card .foodInfoNoSpacer a",
       "clickType": "clickOnce",
       "discardInitialElements": "do-not-discard",
       "clickElementUniquenessType": "uniqueHTML"
@@ -35,7 +35,7 @@
       "id": "serving_size",
       "type": "SelectorText",
       "parentSelectors": ["food_ele_click"],
-      "selector": "td#servingSize",
+      "selector": ":is(td:contains('Serving Size'), #servingSize)",
       "multiple": false,
       "regex": "",
       "delay": 0
@@ -44,7 +44,7 @@
       "id": "calories",
       "type": "SelectorText",
       "parentSelectors": ["food_ele_click"],
-      "selector": "td#calories",
+      "selector": ":is(td:contains('Calories'), #calories)",
       "multiple": false,
       "regex": "",
       "delay": 0
@@ -53,7 +53,7 @@
       "id": "fat",
       "type": "SelectorText",
       "parentSelectors": ["food_ele_click"],
-      "selector": "td#totalFat",
+      "selector": ":is(td:contains('Total fat'), #totalFat)",
       "multiple": false,
       "regex": "",
       "delay": 0
@@ -62,7 +62,7 @@
       "id": "protein",
       "type": "SelectorText",
       "parentSelectors": ["food_ele_click"],
-      "selector": "td#protein",
+      "selector": ":is(td:contains('Protein'), #protein)",
       "multiple": false,
       "regex": "",
       "delay": 0
@@ -71,7 +71,7 @@
       "id": "carbs",
       "type": "SelectorText",
       "parentSelectors": ["food_ele_click"],
-      "selector": "td#carbohydrates",
+      "selector": ":is(td:contains('Carbohydrates'), #carbohydrates)",
       "multiple": false,
       "regex": "",
       "delay": 0
