@@ -1,0 +1,51 @@
+{
+  "_id": "cy_bitbucket_clone",
+  "startUrl": ["https://bitbucket.org/cythereal/workspace/repositories"],
+  "selectors": [
+    {
+      "id": "repo_card",
+      "type": "SelectorElement",
+      "parentSelectors": ["_root", "page"],
+      "selector": "tr.css-uunpaj",
+      "multiple": true,
+      "delay": 0
+    },
+    {
+      "id": "page",
+      "type": "SelectorLink",
+      "parentSelectors": ["_root", "page"],
+      "selector": "a[page]",
+      "multiple": true,
+      "delay": 0
+    },
+    {
+      "id": "repo_name",
+      "type": "SelectorLink",
+      "parentSelectors": ["repo_card"],
+      "selector": "a.css-1yk35ib",
+      "multiple": false,
+      "delay": 0
+    },
+    {
+      "id": "clone_btn",
+      "type": "SelectorElementClick",
+      "parentSelectors": ["repo_name"],
+      "selector": "div[role='dialog']",
+      "multiple": false,
+      "delay": 2000,
+      "clickElementSelector": "button span:contains('Clone')",
+      "clickType": "clickOnce",
+      "discardInitialElements": "do-not-discard",
+      "clickElementUniquenessType": "uniqueText"
+    },
+    {
+      "id": "clone",
+      "type": "SelectorElementAttribute",
+      "parentSelectors": ["clone_btn"],
+      "selector": "input[aria-label=\"Copyable input\"]",
+      "multiple": false,
+      "extractAttribute": "value",
+      "delay": 0
+    }
+  ]
+}
