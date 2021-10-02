@@ -5,3 +5,6 @@ scrape SITE_MAP:
   cp '{{SITE_MAP}}' ./src/sitemap.json;
   node ./src/scrape.js | tee ./src/output.json;
 
+install:
+  yarn install;
+
