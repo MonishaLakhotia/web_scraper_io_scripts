@@ -1,0 +1,13 @@
+version: '3'
+services:
+  web_scraper_io_app:
+    build: 
+      context: .
+      dockerfile: Dockerfile.app
+      args:
+        VARIANT: 16-bullseye
+    volumes:
+      - ..:/workspace:cached
+    # Overrides default command so things don't shut down after the process ends.
+    command: sleep infinity
+  
