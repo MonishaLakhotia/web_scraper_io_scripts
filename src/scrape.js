@@ -6,7 +6,7 @@ async function main() {
 
   const options = {delay: 10, pageLoadDelay: 10, browser: 'headless'} // optional delay, pageLoadDelay and browser
   const scraped = await webscraper(sitemap, options);
-  console.log(scraped);
+  console.log(JSON.stringify(scraped, null, 2));
 }
 
 main();
