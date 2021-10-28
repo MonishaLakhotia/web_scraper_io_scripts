@@ -1,4 +1,4 @@
-# vim : set filetype=bash :
+# vim: filetype=bash
 
 scrape SITE_MAP:
   #!/usr/bin/env bash
