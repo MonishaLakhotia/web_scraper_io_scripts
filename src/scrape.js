@@ -11,6 +11,7 @@ function trim(thing) {
 }
 
 async function main() {
+  const data_format = process.argv[2];
   const sitemap = fs.readJSONSync(__dirname + '/sitemap.json');
 
   const scrapOptions = {delay: 10, pageLoadDelay: 10, browser: 'headless'} // optional delay, pageLoadDelay and browser
@@ -20,16 +21,20 @@ async function main() {
   // trim string values
   cleanedData = cleanedData.map(s => jr.fromKeyValArray(jr.toKeyValArray(s).map(kv => ({key:kv.key,value:trim(kv.value)}))));
 
-  // print scraped data in json format
-  // console.log(JSON.stringify(cleanedData, null, 2));
+  if (data_format === 'json') {
+    // print scraped data in json format
+    console.log(JSON.stringify(cleanedData, null, 2));
+  }
 
-  // quote: '' removes quotes from fields/headers
-  // const parserOptions = { quote: '' }
-  // OR for no customizations
-  const parserOptions = {};
-  const csv = json2csv.parse(cleanedData, parserOptions);
-  // print scraped data in csv format
-  console.log(csv);
+  if (data_format === 'csv') {
+    // quote: '' removes quotes from fields/headers
+    // const parserOptions = { quote: '' }
+    // OR for no customizations
+    const parserOptions = {};
+    const csv = json2csv.parse(cleanedData, parserOptions);
+    // print scraped data in csv format
+    console.log(csv);
+  }
 }
 
 main();
