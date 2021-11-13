@@ -1,15 +1,10 @@
 {
   "_id": "anime_prac",
-  "startUrl": [
-    "https://1anime.to/browse-anime?search=my+hero"
-  ],
+  "startUrl": ["https://1anime.to/browse-anime?search=my+hero"],
   "selectors": [
     {
       "id": "card",
-      "parentSelectors": [
-        "_root",
-        "card"
-      ],
+      "parentSelectors": ["_root", "card"],
       "type": "SelectorElementClick",
       "clickElementSelector": "li[class=\"page-item next\"]",
       "clickElementUniquenessType": "uniqueHTMLText",
@@ -21,9 +16,7 @@
     },
     {
       "id": "title",
-      "parentSelectors": [
-        "card"
-      ],
+      "parentSelectors": ["card"],
       "type": "SelectorText",
       "selector": "p",
       "multiple": false,

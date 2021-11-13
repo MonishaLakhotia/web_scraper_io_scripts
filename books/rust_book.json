@@ -1,17 +1,12 @@
 {
   "_id": "rust_book",
-  "startUrl": [
-    "https://doc.rust-lang.org/book/title-page.html"
-  ],
+  "startUrl": ["https://doc.rust-lang.org/book/title-page.html"],
   "selectors": [
     {
       "delay": 0,
       "id": "next",
       "multiple": false,
-      "parentSelectors": [
-        "_root",
-        "next"
-      ],
+      "parentSelectors": ["_root", "next"],
       "selector": "a.next",
       "type": "SelectorLink"
     },
@@ -19,10 +14,7 @@
       "delay": 0,
       "id": "page",
       "multiple": true,
-      "parentSelectors": [
-        "_root",
-        "next"
-      ],
+      "parentSelectors": ["_root", "next"],
       "selector": "main",
       "type": "SelectorElement"
     },
@@ -30,9 +22,7 @@
       "delay": 0,
       "id": "title",
       "multiple": false,
-      "parentSelectors": [
-        "page"
-      ],
+      "parentSelectors": ["page"],
       "regex": "",
       "selector": ":is(h1,h2)",
       "type": "SelectorText"

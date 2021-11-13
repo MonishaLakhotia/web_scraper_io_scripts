@@ -5,8 +5,11 @@ const jtu = require('json-test-utility');
 const jr = jtu.jsonRefactor;
 
 function trim(thing) {
-  return (typeof thing === 'string')
-    ? thing.trim().replace(/\s{2,}/g, ' ').replace(/,/g, ';')
+  return typeof thing === 'string'
+    ? thing
+        .trim()
+        .replace(/\s{2,}/g, ' ')
+        .replace(/,/g, ';')
     : thing;
 }
 
@@ -14,12 +17,14 @@ async function main() {
   const data_format = process.argv[2];
   const sitemap = fs.readJSONSync(__dirname + '/sitemap.json');
 
-  const scrapOptions = {delay: 10, pageLoadDelay: 10, browser: 'headless'} // optional delay, pageLoadDelay and browser
+  const scrapOptions = { delay: 10, pageLoadDelay: 10, browser: 'headless' }; // optional delay, pageLoadDelay and browser
   const scraped = await webscraper(sitemap, scrapOptions);
   // ensure that scraped data is an array
   let cleanedData = !Array.isArray(scraped) ? [scraped] : scraped;
   // trim string values
-  cleanedData = cleanedData.map(s => jr.fromKeyValArray(jr.toKeyValArray(s).map(kv => ({key:kv.key,value:trim(kv.value)}))));
+  cleanedData = cleanedData.map(s =>
+    jr.fromKeyValArray(jr.toKeyValArray(s).map(kv => ({ key: kv.key, value: trim(kv.value) })))
+  );
 
   if (data_format === 'json') {
     // print scraped data in json format
@@ -38,4 +43,3 @@ async function main() {
 }
 
 main();
-
