@@ -16,5 +16,8 @@ format-all:
   prettier --write "${all_files[@]}";
 
 install:
-  yarn install;
+  npm install -g prettier
+
+build:
+  yarn install
 
