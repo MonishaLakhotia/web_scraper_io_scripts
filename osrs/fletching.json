@@ -1,0 +1,58 @@
+{
+  "_id": "fletching",
+  "startUrl": ["https://secure.runescape.com/m=hiscore_oldschool/overall?table=10&page=1"],
+  "selectors": [
+    {
+      "delay": 0,
+      "id": "character-element",
+      "multiple": true,
+      "parentSelectors": ["_root"],
+      "selector": "tr:gt(1)",
+      "type": "SelectorElement"
+    },
+    {
+      "delay": 0,
+      "id": "rank-name",
+      "multiple": false,
+      "parentSelectors": ["character-element"],
+      "selector": "a",
+      "type": "SelectorLink"
+    },
+    {
+      "delay": 0,
+      "id": "attack-xp",
+      "multiple": false,
+      "parentSelectors": ["rank-name"],
+      "regex": "",
+      "selector": "#contentHiscores tr:contains(Attack) td:nth-of-type(5)",
+      "type": "SelectorText"
+    },
+    {
+      "delay": 0,
+      "id": "strength-xp",
+      "multiple": false,
+      "parentSelectors": ["rank-name"],
+      "regex": "",
+      "selector": "#contentHiscores tr:contains(Strength) td:nth-of-type(5)",
+      "type": "SelectorText"
+    },
+    {
+      "delay": 0,
+      "id": "fletching-xp",
+      "multiple": false,
+      "parentSelectors": ["rank-name"],
+      "regex": "",
+      "selector": "#contentHiscores tr:contains(Fletching) td:nth-of-type(5)",
+      "type": "SelectorText"
+    },
+    {
+      "delay": 0,
+      "id": "crafting-xp",
+      "multiple": false,
+      "parentSelectors": ["rank-name"],
+      "regex": "",
+      "selector": "#contentHiscores tr:contains(Crafting) td:nth-of-type(5)",
+      "type": "SelectorText"
+    }
+  ]
+}
