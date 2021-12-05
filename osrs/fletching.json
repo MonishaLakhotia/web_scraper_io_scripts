@@ -1,6 +1,6 @@
 {
   "_id": "fletching",
-  "startUrl": ["https://secure.runescape.com/m=hiscore_oldschool/overall?table=10&page=1"],
+  "startUrl":["https://secure.runescape.com/m=hiscore_oldschool/overall?table=10&page=2"],
   "selectors": [
     {
       "delay": 0,
